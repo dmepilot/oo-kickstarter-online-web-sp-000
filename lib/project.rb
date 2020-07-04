@@ -1,14 +1,15 @@
+require 'pry'
 class Project
   attr_reader :title, :backers
-  attr_accessor :backer
   
   def initialize(title)
     @title = title 
     @backers = []
   end
   
-  def add_backer(backer)
-    @backers << backer
-    backer.backed_projects << self
+  def add_backer(backer1)
+    @backers << backer1
+    backer1.backed_projects << self
+  #binding.pry
   end
 end
